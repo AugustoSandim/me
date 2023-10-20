@@ -1,9 +1,10 @@
-Augusto Sandim Campo Grande, Mato Grosso do Sul, Brazil
+## Augusto Sandim 
+**Campo Grande, Mato Grosso do Sul, Brazil**
 
 - augustosandim@gmail.com
 - [linkedin.com/in/augustosandim](https://www.linkedin.com/in/augustosandim)
 
-**Summary**
+### Summary
 
 Experienced Software Developer was adept in bringing forth expertise in the design, installation, testing, and maintenance of software systems. Equipped with a diverse and promising skill-set. Proficient in various platforms, languages, and embedded systems. Experienced with the
 
@@ -11,11 +12,11 @@ latest cutting-edge development tools and procedures. Able to effectively self-m
 
 during independent projects, as well as collaborating as part of a productive team.
 
-**Experience**
+## Experience 
 
-**Senior Software Engineer![](Aspose.Words.c461f36c-c0e5-4ff7-b5f8-b4b48cdf62a8.001.png)**
+### Senior Software Engineer
 
-iFood
+![](Aspose.Words.c461f36c-c0e5-4ff7-b5f8-b4b48cdf62a8.001.png)  iFood
 
 Jun 2022 - Present (1 year 5 months)
 
@@ -35,9 +36,9 @@ Develop and optimized web interfaces web using NextJS, React, and Styled Compone
 - Experience with test framework and best practices for quality;
 - Experience with performance debugging and benchmarking;
 
-**Senior Software Engineer![](Aspose.Words.c461f36c-c0e5-4ff7-b5f8-b4b48cdf62a8.002.png)**
+### Senior Software Engineer
 
-RD Station
+**![](Aspose.Words.c461f36c-c0e5-4ff7-b5f8-b4b48cdf62a8.002.png) RD Station**
 
 Apr 2021 - May 2022 (1 year 2 months)
 
@@ -52,9 +53,9 @@ In my position there, my leading roles were:
 - Support entry-level engineers on technical-related issues with advisories and pair programming.
 - Collaborate with RD’s hiring process.
 
-**Senior Software Engineer![](Aspose.Words.c461f36c-c0e5-4ff7-b5f8-b4b48cdf62a8.003.png)**
+### Senior Software Engineer 
 
-Letrus
+**![](Aspose.Words.c461f36c-c0e5-4ff7-b5f8-b4b48cdf62a8.003.png) Letrus**
 
 Apr 2018 - Apr 2021 (3 years 1 month)
 
@@ -75,9 +76,9 @@ In my position there, my main roles were:
 - Experience with test framework and best practices for quality;
 - Experience with performance debugging and benchmarking;
 
-**Frontend Developer![](Aspose.Words.c461f36c-c0e5-4ff7-b5f8-b4b48cdf62a8.004.png)**
+### Frontend Developer 
 
-All Set Comunicação
+**![](Aspose.Words.c461f36c-c0e5-4ff7-b5f8-b4b48cdf62a8.004.png) All Set Comunicação**
 
 Aug 2017 - Apr 2018 (9 months)
 
@@ -86,9 +87,9 @@ Aug 2017 - Apr 2018 (9 months)
 - Worked to solve complex problems using the latest in Cloud, Mobile, and Web Technologies.
 - Developed and presented findings and solutions to audiences including senior executives and stakeholders.
 
-**Full Stack Software Developer![](Aspose.Words.c461f36c-c0e5-4ff7-b5f8-b4b48cdf62a8.005.png)**
+### Full Stack Software Developer 
 
-Jera
+**![](Aspose.Words.c461f36c-c0e5-4ff7-b5f8-b4b48cdf62a8.005.png) Jera**
 
 Sep 2014 - Aug 2017 (3 years)
 
@@ -102,23 +103,25 @@ In my position there, my main roles were:
 
 Technologies used: Ruby on Rails, Sinatra, Node.js, Redis, AngularJS, EmberJS, AWS EC2, AWS RDS
 
-**Desenvolvedor Java ![](Aspose.Words.c461f36c-c0e5-4ff7-b5f8-b4b48cdf62a8.006.png)**N&A Informática LTDA.
+### Desenvolvedor Java 
+
+**![](Aspose.Words.c461f36c-c0e5-4ff7-b5f8-b4b48cdf62a8.006.png) N&A Informática LTDA.**
 
 Dec 2013 - Aug 2014 (9 months)
 
-**Education**
+## Education 
 
-**Estácio![](Aspose.Words.c461f36c-c0e5-4ff7-b5f8-b4b48cdf62a8.007.png)**
+Postgraduate Degree, Digital Game Development 
+2023 - 2023
+**Estácio**
 
-Postgraduate Degree, Digital Game Development 2023 - 2023
 
-**Universidade de Campo Grande - Unaes Anhanguera ![](Aspose.Words.c461f36c-c0e5-4ff7-b5f8-b4b48cdf62a8.008.png)**Bachelor's Degree, Computer Science
-
+Bachelor's Degree, Computer Science
 2014 - 2018
+**Universidade de Campo Grande - Unaes Anhanguera**
 
-**Skills**
 
-JavaScript • React.js • Next.js • styled-components • TypeScript • Software Development • SASS
+## Skills 
 
+- JavaScript • React.js • Next.js • styled-components • TypeScript • Software Development • SASS
 - Front-end Engineering • Team Leadership • Communication
-  Augusto Sandim - page 3
