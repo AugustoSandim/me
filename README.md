@@ -120,7 +120,6 @@ Bachelor's Degree, Computer Science
 2014 - 2018
 **Universidade de Campo Grande - Unaes Anhanguera**
 
-
 ## Skills 
 
 **Software Development:**
