@@ -137,31 +137,38 @@ Bachelor's Degree, Computer Science
 - Effective self-management during independent projects.
 - Collaborating as part of a productive team.
 - Leading resolution of technical problems and conducting code reviews.
+
 **Testing and Quality Assurance:**
 - Implementing, testing, and maintaining platform features.
 - Experience with test frameworks and best practices for quality.
 - Disseminating TDD philosophy and promoting testing first.
+
 **Project Management:**
 - Leading alignment meetings with project stakeholders.
 - Configuring and maintaining continuous integration (Circle CI).
 - Supporting entry-level engineers on technical-related issues.
+
 **Education and Mentorship:**
 - Bachelor's Degree in Computer Science.
 - Postgraduate Degree in Digital Game Development.
 - Mentoring and supporting entry-level engineers.
 - Collaborating with hiring processes.
+
 **Frontend Development:**
 - Developing responsive, fast, and optimized web interfaces.
 - Finding and solving performance problems.
 - Researching and communicating front-end best practices.
 - Promoting initiatives to adopt new languages in systems.
+
 **Other Technical Skills:**
 - Building web APIs, web apps, and mobile web apps.
 - Deployment, monitoring, and error tracking.
 - Technologies: Ruby on Rails, Sinatra, Node.js, Redis, AngularJS, EmberJS, AWS EC2, AWS RDS.
+
 **Domain Knowledge:**
 - Specialization in Digital Marketing results for Medium and Small companies.
 - Impacting education through technology with Letrus.
+
 **Continuous Learning:**
 - Keeping up with the latest technologies and development tools.
 - Promoting initiatives to move or adopt new languages in systems.
