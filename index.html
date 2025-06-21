@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Augusto Sandim - Developer</title>
+    <title>Augusto Sandim - Frontend Developer</title>
 
     <!-- Google Fonts -->
     <link
@@ -68,6 +68,7 @@
         flex: 1;
         max-width: 600px;
         animation: fadeInUp 1s ease;
+        z-index: 1;
       }
 
       .hero-text h1 {
@@ -206,8 +207,35 @@
           font-size: 2.5rem;
         }
 
+        .hero-image-mask {
+          width: 350px;
+          height: 350px;
+          z-index: -1;
+        }
+
         .hero-image img {
           width: 250px;
+          margin: 15px;
+        }
+
+        .socials {
+          position: fixed;
+          bottom: 0;
+          display: flex;
+          gap: 20px;
+          background: #000;
+          left: 0;
+          right: 0;
+          padding: 20px;
+          text-align: center;
+          top: auto;
+          transform: none;
+          flex-direction: row;
+          justify-content: space-evenly;
+        }
+
+        .resume {
+          margin-bottom: 60px;
         }
       }
     </style>
@@ -217,16 +245,16 @@
     <header>
       <div class="logo">Augusto</div>
       <nav>
-        <a href="#hero">Home</a>
+        <!-- <a href="#hero">Home</a> -->
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#resume">Resume</a>
-        <a href="https://www.linkedin.com/in/augustosandim/" target="_blank"
+        <!-- <a href="https://www.linkedin.com/in/augustosandim/" target="_blank"
           >LinkedIn</a
-        >
-        <a href="/mnt/data/Augusto_Sandim_Resume_Updated.pdf" download
+        > -->
+        <!-- <a href="/mnt/data/Augusto_Sandim_Resume_Updated.pdf" download
           >Download CV</a
-        >
+        > -->
       </nav>
     </header>
 
