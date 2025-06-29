@@ -2,97 +2,156 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Augusto Sandim - Frontend Developer</title>
 
     <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
 
     <style>
-      * {
-        box-sizing: border-box;
+      html {
         scroll-behavior: smooth;
+      }
+      * {
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
 
       body {
-        font-family: "Roboto", sans-serif;
-        background: #0d0d0d;
-        color: #fff;
+        font-family: "Inter", sans-serif;
+        background-color: #0a0a0a;
+        color: #ffffff;
+        line-height: 1.6;
         overflow-x: hidden;
       }
 
       header {
-        padding: 20px 40px;
+        width: 100%;
+        padding: 24px 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background: #0d0d0d;
-        position: sticky;
+        position: fixed;
         top: 0;
-        z-index: 10;
+        left: 0;
+        background-color: #0a0a0a;
+        z-index: 1000;
       }
 
       .logo {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #ffffff;
       }
 
       nav a {
-        color: #aaa;
-        margin-left: 25px;
+        margin-left: 24px;
         text-decoration: none;
-        font-weight: 500;
+        color: #aaa;
+        font-weight: 300;
+        transition: color 0.3s;
       }
 
       nav a:hover {
         color: #fff;
       }
 
-      .hero {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        padding: 60px 40px;
-        background: linear-gradient(to right, #0d0d0d, #1c1c1c);
+      /* Seções fullscreen com vídeo */
+      section.fullscreen {
+        position: relative;
         overflow: hidden;
-        height: 91vh;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 100px 40px 60px;
+        max-width: 900px;
+        margin: auto;
+        color: white;
+        animation: fadeInUp 1s forwards;
+        opacity: 0;
+        transform: translateY(40px);
+        z-index: 0;
       }
 
-      .hero-text {
-        flex: 1;
-        max-width: 600px;
-        animation: fadeInUp 1s ease;
+      /* Vídeo de fundo */
+      section.fullscreen video.background-video {
+        position: fixed; /* fixa na tela */
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+        pointer-events: none;
+        filter: brightness(0.6);
+        transition: filter 0.5s ease;
+      }
+
+      /* Conteúdo da seção acima do vídeo */
+      section.fullscreen .content {
+        position: relative;
         z-index: 1;
+        max-width: 900px;
+        margin: auto;
+        text-align: center;
       }
 
-      .hero-text h1 {
+      /* Animação da entrada */
+      @keyframes fadeInUp {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .intro h1 {
         font-size: 3.5rem;
+        font-weight: 500;
         margin-bottom: 20px;
       }
 
-      .hero-text p {
-        font-size: 1.1rem;
-        line-height: 1.6;
+      .intro p {
+        font-size: 1.2rem;
+        max-width: 700px;
         color: #ccc;
+        margin: 0 auto 30px;
       }
 
-      .hero-buttons {
-        margin-top: 30px;
+      h2 {
+        font-size: 2rem;
+        color: #7f5af0;
+        margin-bottom: 24px;
       }
 
-      .hero-buttons a {
+      .section-content {
+        color: #ccc;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        max-width: 700px;
+        margin: auto;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+        margin-top: 12px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      li {
+        margin-bottom: 8px;
+      }
+
+      .button {
         display: inline-block;
-        margin-right: 15px;
+        margin-top: 30px;
         background: #7f5af0;
         color: white;
         padding: 12px 24px;
@@ -101,220 +160,88 @@
         transition: background 0.3s;
       }
 
-      .hero-buttons a:hover {
+      .button:hover {
         background: #5a36dc;
       }
 
-      .hero-image {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        animation: float 6s ease-in-out infinite;
-      }
-
-      .hero-image-mask {
-        background: yellow;
-        width: 600px;
-        height: 600px;
-        position: absolute;
-        margin: auto;
-        border-radius: 50%;
-        z-index: -1;
-      }
-
-      .hero-image img {
-        width: 350px;
-        transform: scale(1.71);
-        border-radius: 50%;
-      }
-
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(40px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-0px);
-        }
-      }
-
-      .socials {
-        position: fixed;
-        top: 50%;
-        right: 20px;
-        transform: translateY(-50%);
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      .socials a {
-        color: #aaa;
-        font-size: 1.2rem;
-        text-decoration: none;
-        transition: color 0.3s;
-      }
-
-      .socials a:hover {
-        color: #fff;
-      }
-
-      section.skills {
-        padding: 60px 40px;
-        background: #121212;
-      }
-
-      .skills h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-        color: #7f5af0;
-      }
-
-      .skills-category {
-        margin-bottom: 40px;
-      }
-
-      .skills-category h3 {
-        color: #f0f0f0;
-        margin-bottom: 10px;
-      }
-
-      .skills-category ul {
-        list-style: none;
-        padding-left: 0;
-      }
-
-      .skills-category li {
-        margin-bottom: 8px;
-        font-size: 1.1rem;
-        color: #ccc;
-      }
-
-      @media (max-width: 768px) {
-        .hero {
-          flex-direction: column;
-          padding: 40px 20px;
-        }
-
-        .hero-text h1 {
-          font-size: 2.5rem;
-        }
-
-        .hero-image-mask {
-          width: 350px;
-          height: 350px;
-          z-index: -1;
-        }
-
-        .hero-image img {
-          width: 250px;
-          margin: 15px;
-        }
-
-        .socials {
-          position: fixed;
-          bottom: 0;
-          display: flex;
-          gap: 20px;
-          background: #000;
-          left: 0;
-          right: 0;
-          padding: 20px;
-          text-align: center;
-          top: auto;
-          transform: none;
-          flex-direction: row;
-          justify-content: space-evenly;
-          padding-bottom: env(safe-area-inset-bottom);
-          height: 60px;
-        }
-        ƒ .resume {
-          padding-bottom: 150px !important;
-        }
+      .footer {
+        padding: 40px;
+        text-align: center;
+        color: #555;
+        font-size: 0.9rem;
+        background-color: #0a0a0a;
       }
     </style>
   </head>
 
   <body>
     <header>
-      <div class="logo">Augusto</div>
+      <div class="logo">Augusto Sandim</div>
       <nav>
-        <!-- <a href="#hero">Home</a> -->
         <a href="#about">About</a>
-        <a href="#skills">Skills</a>
+        <a href="#frontend">Frontend</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#devops">DevOps</a>
+        <a href="#leadership">Leadership</a>
         <a href="#resume">Resume</a>
-        <!-- <a href="https://www.linkedin.com/in/augustosandim/" target="_blank"
+        <a href="https://www.linkedin.com/in/augustosandim/" target="_blank"
           >LinkedIn</a
-        > -->
-        <!-- <a href="/mnt/data/Augusto_Sandim_Resume_Updated.pdf" download
-          >Download CV</a
-        > -->
+        >
       </nav>
     </header>
 
-    <section id="hero" class="hero">
-      <div class="hero-text">
-        <h1>Hi, I'm Augusto</h1>
+    <section id="home" class="intro fullscreen">
+      <video autoplay muted loop playsinline class="background-video">
+        <source
+          src="https://cdn.videvo.net/videvo_files/video/premium/video0460/large_watermarked/_import_8bfc1e62-2406-4e94-869a-d70c3a10a8a9_preview.mp4"
+          type="video/mp4"
+        />
+        Seu navegador não suporta vídeo em background.
+      </video>
+      <div class="content">
+        <h1>Frontend Developer & Chapter Lead</h1>
         <p>
-          I'm a Frontend Developer & Chapter Lead passionate about architecture,
-          clean code, and crafting engaging user experiences. Let's work
-          together!
+          I'm Augusto Sandim — passionate about frontend architecture, clean
+          code and scalable user experiences. Currently leading frontend teams
+          at iFood.
         </p>
-        <div class="hero-buttons">
-          <a href="#about">About Me</a>
-          <a href="#resume">My Resume</a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <div class="hero-image-mask"></div>
-        <img src="./assets/me.png" alt="Augusto Sandim portrait" />
+        <a href="#resume" class="button">Download Resume</a>
       </div>
     </section>
 
-    <section
-      id="about"
-      class="about"
-      style="padding: 60px 40px; background: #181818"
-    >
-      <h2 style="font-size: 2rem; color: #7f5af0; margin-bottom: 20px">
-        About Me
-      </h2>
-      <p
-        style="
-          font-size: 1.1rem;
-          line-height: 1.6;
-          color: #ccc;
-          max-width: 800px;
-        "
-      >
-        I'm Augusto Sandim, a Senior Software Engineer and Chapter Lead at
-        iFood. With over a decade of experience, I've worked across various
-        domains building high-performance frontend architectures and web
-        applications. I’m passionate about clean code, design systems, and
-        mentoring teams to deliver quality at scale. I enjoy turning complex
-        problems into simple, elegant solutions and constantly seek out
-        opportunities to grow both technically and as a leader.
-      </p>
+    <section id="about" class="fullscreen">
+      <video autoplay muted loop playsinline class="background-video">
+        <source
+          src="https://cdn.videvo.net/videvo_files/video/free/2017-06/small_watermarked/170503_09_Dark_Bubbles_preview.mp4"
+          type="video/mp4"
+        />
+        Seu navegador não suporta vídeo em background.
+      </video>
+      <div class="content">
+        <h2>About Me</h2>
+        <p class="section-content">
+          I'm a Senior Software Engineer and Chapter Lead at iFood. With over a
+          decade of experience, I've worked across various domains building
+          high-performance frontend architectures and web applications. I’m
+          passionate about clean code, design systems, and mentoring teams to
+          deliver quality at scale. I enjoy turning complex problems into
+          simple, elegant solutions and constantly seek out opportunities to
+          grow both technically and as a leader.
+        </p>
+      </div>
     </section>
 
-    <section id="skills" class="skills">
-      <h2>Skills & Experience</h2>
-
-      <div class="skills-category">
-        <h3>Frontend Development</h3>
-        <ul>
+    <section id="frontend" class="fullscreen">
+      <video autoplay muted loop playsinline class="background-video">
+        <source
+          src="https://cdn.videvo.net/videvo_files/video/free/2017-06/small_watermarked/170503_07_Flowing_Geometry_preview.mp4"
+          type="video/mp4"
+        />
+        Seu navegador não suporta vídeo em background.
+      </video>
+      <div class="content">
+        <h2>Frontend Development</h2>
+        <ul class="section-content">
           <li>React, Next.js, JavaScript (ES6+), TypeScript</li>
           <li>Styled Components, CSS Modules, Sass</li>
           <li>Responsive Web Design & Mobile-first Development</li>
@@ -322,27 +249,54 @@
           <li>Testing: Jest, React Testing Library</li>
         </ul>
       </div>
+    </section>
 
-      <div class="skills-category">
-        <h3>Architecture & Back-end</h3>
-        <ul>
+    <section id="architecture" class="fullscreen">
+      <video autoplay muted loop playsinline class="background-video">
+        <source
+          src="https://cdn.videvo.net/videvo_files/video/free/2017-05/small_watermarked/170425_03_Nebula_preview.mp4"
+          type="video/mp4"
+        />
+        Seu navegador não suporta vídeo em background.
+      </video>
+      <div class="content">
+        <h2>Architecture & Back-end</h2>
+        <ul class="section-content">
           <li>Clean Architecture, Microservices, Domain-Driven Design (DDD)</li>
           <li>Node.js, Go, Ruby on Rails</li>
           <li>API design (REST, gRPC), system integration</li>
         </ul>
       </div>
+    </section>
 
-      <div class="skills-category">
-        <h3>DevOps & Tooling</h3>
-        <ul>
+    <section id="devops" class="fullscreen">
+      <video autoplay muted loop playsinline class="background-video">
+        <source
+          src="https://cdn.videvo.net/videvo_files/video/free/2017-06/small_watermarked/170503_11_Blue_Particles_preview.mp4"
+          type="video/mp4"
+        />
+        Seu navegador não suporta vídeo em background.
+      </video>
+      <div class="content">
+        <h2>DevOps & Tooling</h2>
+        <ul class="section-content">
           <li>Docker, AWS, CI/CD (CircleCI)</li>
           <li>Monitoring and logging best practices</li>
         </ul>
       </div>
+    </section>
 
-      <div class="skills-category">
-        <h3>Leadership & Collaboration</h3>
-        <ul>
+    <section id="leadership" class="fullscreen">
+      <video autoplay muted loop playsinline class="background-video">
+        <source
+          src="https://cdn.videvo.net/videvo_files/video/free/2017-06/small_watermarked/170503_14_Abstract_Flow_preview.mp4"
+          type="video/mp4"
+        />
+        Seu navegador não suporta vídeo em background.
+      </video>
+      <div class="content">
+        <h2>Leadership & Collaboration</h2>
+        <ul class="section-content">
           <li>Chapter Lead at iFood</li>
           <li>Mentoring, Pair Programming, and Career Development</li>
           <li>Cross-functional collaboration with design and product teams</li>
@@ -350,42 +304,61 @@
       </div>
     </section>
 
-    <section
-      id="resume"
-      class="resume"
-      style="padding: 60px 40px; background: #141414"
-    >
-      <h2 style="font-size: 2rem; color: #7f5af0; margin-bottom: 20px">
-        Resume
-      </h2>
-      <p style="font-size: 1.1rem; color: #ccc; max-width: 800px">
-        You can download my full resume in PDF format below. It includes
-        detailed information about my experience at iFood, RD Station, Letrus,
-        and other roles, as well as my educational background and
-        certifications.
-      </p>
-      <a
-        href="/mnt/data/Augusto_Sandim_Resume_Updated.pdf"
-        download
-        style="
-          display: inline-block;
-          margin-top: 20px;
-          background: #7f5af0;
-          color: white;
-          padding: 12px 24px;
-          border-radius: 8px;
-          text-decoration: none;
-          transition: background 0.3s;
-        "
-        >Download Resume</a
-      >
+    <section id="resume" class="fullscreen">
+      <video autoplay muted loop playsinline class="background-video">
+        <source
+          src="https://cdn.videvo.net/videvo_files/video/free/2017-05/small_watermarked/170425_06_Dust_Motion_preview.mp4"
+          type="video/mp4"
+        />
+        Seu navegador não suporta vídeo em background.
+      </video>
+      <div class="content">
+        <h2>Resume</h2>
+        <p class="section-content">
+          You can download my full resume in PDF format. It includes detailed
+          information about my experience at iFood, RD Station, Letrus, and
+          other roles, as well as my educational background and certifications.
+        </p>
+        <a
+          href="/mnt/data/Augusto_Sandim_Resume_Updated.pdf"
+          class="button"
+          download
+          >Download PDF</a
+        >
+      </div>
     </section>
 
-    <div class="socials">
-      <a href="https://www.linkedin.com/in/augustosandim/" target="_blank"
-        >LinkedIn</a
-      >
-      <a href="https://github.com/augustoSandim" target="_blank">GitHub</a>
-    </div>
+    <footer class="footer">
+      &copy; 2024 Augusto Sandim. All rights reserved.
+    </footer>
+
+    <script>
+      // Parallax background position suave
+      function updateParallax() {
+        const sections = document.querySelectorAll("section.fullscreen");
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        sections.forEach((section) => {
+          const offsetTop = section.offsetTop;
+          const height = section.offsetHeight;
+
+          if (
+            scrollTop + window.innerHeight > offsetTop &&
+            scrollTop < offsetTop + height
+          ) {
+            const yPos = -((scrollTop - offsetTop) * 0.3);
+            const video = section.querySelector("video.background-video");
+            if (video) {
+              video.style.transform = `translateY(${yPos}px)`;
+            }
+          }
+        });
+      }
+
+      window.addEventListener("scroll", updateParallax);
+      window.addEventListener("load", updateParallax);
+      window.addEventListener("resize", updateParallax);
+    </script>
   </body>
 </html>
