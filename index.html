@@ -4,13 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Augusto Sandim - Frontend Developer</title>
-
-    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
-
     <style>
       html {
         scroll-behavior: smooth;
@@ -20,7 +17,6 @@
         padding: 0;
         box-sizing: border-box;
       }
-
       body {
         font-family: "Inter", sans-serif;
         background-color: #0a0a0a;
@@ -28,7 +24,6 @@
         line-height: 1.6;
         overflow-x: hidden;
       }
-
       header {
         width: 100%;
         padding: 24px 40px;
@@ -41,13 +36,11 @@
         background-color: #0a0a0a;
         z-index: 1000;
       }
-
       .logo {
         font-size: 1.3rem;
         font-weight: 700;
         color: #ffffff;
       }
-
       nav a {
         margin-left: 24px;
         text-decoration: none;
@@ -55,12 +48,9 @@
         font-weight: 300;
         transition: color 0.3s;
       }
-
       nav a:hover {
         color: #fff;
       }
-
-      /* Seções fullscreen com vídeo */
       section.fullscreen {
         position: relative;
         overflow: hidden;
@@ -77,10 +67,8 @@
         transform: translateY(40px);
         z-index: 0;
       }
-
-      /* Vídeo de fundo */
       section.fullscreen video.background-video {
-        position: fixed; /* fixa na tela */
+        position: fixed;
         top: 0;
         left: 0;
         width: 100vw;
@@ -89,10 +77,7 @@
         z-index: -1;
         pointer-events: none;
         filter: brightness(0.6);
-        transition: filter 0.5s ease;
       }
-
-      /* Conteúdo da seção acima do vídeo */
       section.fullscreen .content {
         position: relative;
         z-index: 1;
@@ -100,34 +85,28 @@
         margin: auto;
         text-align: center;
       }
-
-      /* Animação da entrada */
       @keyframes fadeInUp {
         to {
           opacity: 1;
           transform: translateY(0);
         }
       }
-
       .intro h1 {
         font-size: 3.5rem;
         font-weight: 500;
         margin-bottom: 20px;
       }
-
       .intro p {
         font-size: 1.2rem;
         max-width: 700px;
         color: #ccc;
         margin: 0 auto 30px;
       }
-
       h2 {
         font-size: 2rem;
         color: #7f5af0;
         margin-bottom: 24px;
       }
-
       .section-content {
         color: #ccc;
         font-size: 1.05rem;
@@ -135,7 +114,6 @@
         max-width: 700px;
         margin: auto;
       }
-
       ul {
         list-style: none;
         padding-left: 0;
@@ -144,11 +122,9 @@
         margin-left: auto;
         margin-right: auto;
       }
-
       li {
         margin-bottom: 8px;
       }
-
       .button {
         display: inline-block;
         margin-top: 30px;
@@ -159,11 +135,9 @@
         text-decoration: none;
         transition: background 0.3s;
       }
-
       .button:hover {
         background: #5a36dc;
       }
-
       .footer {
         padding: 40px;
         text-align: center;
@@ -173,7 +147,6 @@
       }
     </style>
   </head>
-
   <body>
     <header>
       <div class="logo">Augusto Sandim</div>
@@ -190,17 +163,11 @@
       </nav>
     </header>
 
-    <section id="home" class="intro fullscreen">
-      <video autoplay muted loop playsinline class="background-video">
-        <source
-          src="https://cdn.videvo.net/videvo_files/video/premium/video0460/large_watermarked/_import_8bfc1e62-2406-4e94-869a-d70c3a10a8a9_preview.mp4"
-          type="video/mp4"
-        />
-        Seu navegador não suporta vídeo em background.
-      </video>
-      <div class="content">
+    <!-- Static fallback sections with no video until new working URLs are found -->
+    <section id="home" class="fullscreen">
+      <div class="content intro">
         <h1>Frontend Developer & Chapter Lead</h1>
-        <p>
+        <p class="section-content">
           I'm Augusto Sandim — passionate about frontend architecture, clean
           code and scalable user experiences. Currently leading frontend teams
           at iFood.
@@ -210,13 +177,6 @@
     </section>
 
     <section id="about" class="fullscreen">
-      <video autoplay muted loop playsinline class="background-video">
-        <source
-          src="https://cdn.videvo.net/videvo_files/video/free/2017-06/small_watermarked/170503_09_Dark_Bubbles_preview.mp4"
-          type="video/mp4"
-        />
-        Seu navegador não suporta vídeo em background.
-      </video>
       <div class="content">
         <h2>About Me</h2>
         <p class="section-content">
@@ -232,13 +192,6 @@
     </section>
 
     <section id="frontend" class="fullscreen">
-      <video autoplay muted loop playsinline class="background-video">
-        <source
-          src="https://cdn.videvo.net/videvo_files/video/free/2017-06/small_watermarked/170503_07_Flowing_Geometry_preview.mp4"
-          type="video/mp4"
-        />
-        Seu navegador não suporta vídeo em background.
-      </video>
       <div class="content">
         <h2>Frontend Development</h2>
         <ul class="section-content">
@@ -252,13 +205,6 @@
     </section>
 
     <section id="architecture" class="fullscreen">
-      <video autoplay muted loop playsinline class="background-video">
-        <source
-          src="https://cdn.videvo.net/videvo_files/video/free/2017-05/small_watermarked/170425_03_Nebula_preview.mp4"
-          type="video/mp4"
-        />
-        Seu navegador não suporta vídeo em background.
-      </video>
       <div class="content">
         <h2>Architecture & Back-end</h2>
         <ul class="section-content">
@@ -270,13 +216,6 @@
     </section>
 
     <section id="devops" class="fullscreen">
-      <video autoplay muted loop playsinline class="background-video">
-        <source
-          src="https://cdn.videvo.net/videvo_files/video/free/2017-06/small_watermarked/170503_11_Blue_Particles_preview.mp4"
-          type="video/mp4"
-        />
-        Seu navegador não suporta vídeo em background.
-      </video>
       <div class="content">
         <h2>DevOps & Tooling</h2>
         <ul class="section-content">
@@ -287,13 +226,6 @@
     </section>
 
     <section id="leadership" class="fullscreen">
-      <video autoplay muted loop playsinline class="background-video">
-        <source
-          src="https://cdn.videvo.net/videvo_files/video/free/2017-06/small_watermarked/170503_14_Abstract_Flow_preview.mp4"
-          type="video/mp4"
-        />
-        Seu navegador não suporta vídeo em background.
-      </video>
       <div class="content">
         <h2>Leadership & Collaboration</h2>
         <ul class="section-content">
@@ -305,13 +237,6 @@
     </section>
 
     <section id="resume" class="fullscreen">
-      <video autoplay muted loop playsinline class="background-video">
-        <source
-          src="https://cdn.videvo.net/videvo_files/video/free/2017-05/small_watermarked/170425_06_Dust_Motion_preview.mp4"
-          type="video/mp4"
-        />
-        Seu navegador não suporta vídeo em background.
-      </video>
       <div class="content">
         <h2>Resume</h2>
         <p class="section-content">
@@ -331,34 +256,5 @@
     <footer class="footer">
       &copy; 2024 Augusto Sandim. All rights reserved.
     </footer>
-
-    <script>
-      // Parallax background position suave
-      function updateParallax() {
-        const sections = document.querySelectorAll("section.fullscreen");
-        const scrollTop =
-          window.pageYOffset || document.documentElement.scrollTop;
-
-        sections.forEach((section) => {
-          const offsetTop = section.offsetTop;
-          const height = section.offsetHeight;
-
-          if (
-            scrollTop + window.innerHeight > offsetTop &&
-            scrollTop < offsetTop + height
-          ) {
-            const yPos = -((scrollTop - offsetTop) * 0.3);
-            const video = section.querySelector("video.background-video");
-            if (video) {
-              video.style.transform = `translateY(${yPos}px)`;
-            }
-          }
-        });
-      }
-
-      window.addEventListener("scroll", updateParallax);
-      window.addEventListener("load", updateParallax);
-      window.addEventListener("resize", updateParallax);
-    </script>
   </body>
 </html>
